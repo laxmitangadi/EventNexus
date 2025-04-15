@@ -12,6 +12,9 @@ import SponsorEventPage from './components/SponsorEventPage';
 import SponsorDashboard from './components/SponsorDashboard';
 import SponsorEventList from './components/SponsorEventList';
 import SuccessPage from './components/SuccessPage';
+import UserProfile from './components/UserProfile';
+import ProfilePage from './components/ProfilePage';
+
 
 
 function App() {
@@ -30,18 +33,8 @@ function App() {
         <Route path="/sponsordashboard" element={<SponsorDashboard />} />
         <Route path="/sponsoreventslist" element={<SponsorEventList />} />
         <Route path="/successpage" element={<SuccessPage />} />
-
-
-
-
-
-
-
-
-
-
-
-      
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </Router>
   );
