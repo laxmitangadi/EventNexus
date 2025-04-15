@@ -1,0 +1,48 @@
+.main-footer {
+  background-color: #111;
+  color: #eee;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section h4 {
+  margin-bottom: 0.6rem;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons .icons-row {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a svg {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover svg {
+  color: #fff;
+}

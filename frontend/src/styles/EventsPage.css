@@ -1,0 +1,115 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #171717;
+  color: #0e0e0e;
+}
+
+.events-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6b00b6;
+  margin-bottom: 2rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #6b00b6;
+  border-radius: 20px;
+  background-color: white;
+  color: #6b00b6;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #6b00b6;
+  color: white;
+}
+
+.events-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 1rem;
+  text-align: center;
+}
+
+.event-details h2 {
+  font-size: 1.2rem;
+  color: #6b00b6;
+  margin-bottom: 0.5rem;
+}
+
+.event-details p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+.sponsor-now-btn {
+  background-color: #9d00ff;
+  color: white;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.sponsor-now-btn:hover {
+  background-color: #7a00c4;
+}
+.status.approved {
+  color: green;
+  font-weight: bold;
+}
+
+.status.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.sponsor-cta {
+  text-align: center;
+  margin-top: 2rem;
+}

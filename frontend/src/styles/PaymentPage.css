@@ -1,0 +1,275 @@
+.payment-wrapper {
+  max-width: 600px;
+  margin: 4rem auto;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.payment-heading {
+  font-size: 2rem;
+  color: #212b36;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.summary-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f9fa;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.amount {
+  color: #9d00ff;
+  font-weight: bold;
+}
+
+.method-select {
+  margin-bottom: 2rem;
+}
+
+.method-select h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.method-select label {
+  display: block;
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  color: #222;
+  cursor: pointer;
+}
+
+.card-section input,
+.upi-section input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.card-section input:focus,
+.upi-section input:focus {
+  border-color: #9d00ff;
+  outline: none;
+}
+
+.card-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-row input {
+  flex: 1;
+}
+
+.upi-section {
+  margin-bottom: 1.5rem;
+}
+
+.qr-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.qr-wrapper img {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.qr-wrapper p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.pay-btn {
+  background-color: #9d00ff;
+  color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+.pay-btn:hover {
+  background-color: #7a00c4;
+}
+
+.payment-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.summary-card {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.ticket-count {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.event-amount {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.event-details {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.pricing-info {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.total-row {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.booking-info {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.25rem;
+}
+
+.state-select {
+  margin-top: 1rem;
+}
+
+.state-select label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.state-select select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #666;
+}
+
+.login-note {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  color: #666;
+}
+
+.payment-methods {
+  margin: 1.5rem 0;
+}
+
+.payment-methods label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.card-inputs input,
+.upi-inputs input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.card-inputs .row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.qr-block {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pay-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #8128c6;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+  background-color: #e53935;
+}
+.event-details {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* minimal vertical spacing */
+  text-align: left;
+}
+
+.event-details p {
+  margin: 0;
+}

@@ -1,0 +1,84 @@
+.booking-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.booking-container h2 {
+  color: #6b00b6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.ticket-option {
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #fafafa;
+}
+
+.ticket-option:hover {
+  border-color: #9d00ff;
+}
+
+.ticket-option.selected {
+  border-color: #9d00ff;
+  background-color: #f0e6ff;
+  font-weight: bold;
+}
+
+.ticket-count {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ticket-count input {
+  width: 60px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.book-btn {
+  background-color: #9d00ff;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #7a00c4;
+}
+
+.confirmation {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #e6ffe6;
+  border: 1px solid #70db70;
+  color: #008000;
+  text-align: center;
+  border-radius: 8px;
+}
