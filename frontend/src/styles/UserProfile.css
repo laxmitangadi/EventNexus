@@ -1,0 +1,72 @@
+/* === User Profile Page Styles === */
+
+.user-profile-wrapper {
+    min-height: 100vh;
+    background-color: #0E0B16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+  }
+  
+  .user-profile-card {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .user-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .user-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #9D00FF;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .user-email {
+    font-size: 0.875rem;
+    color: #666666;
+  }
+  
+  .user-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .profile-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-label {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.25rem;
+  }
+  
+  .profile-value {
+    font-weight: 600;
+  }
+  

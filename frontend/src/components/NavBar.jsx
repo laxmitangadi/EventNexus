@@ -57,7 +57,7 @@ const NavBar = () => {
       <div className="navbar-column right">
         <a href="#hero">Home</a>
         <a href="#careers">Careers</a>
-        <button className="icon-button" onClick={() => navigate('/login')}>
+        <button className="icon-button" onClick={() => navigate('/profile')}>
           <FaUserCircle size={20} />
         </button>
         <a href="#settings"><FaCog size={20} /></a>
