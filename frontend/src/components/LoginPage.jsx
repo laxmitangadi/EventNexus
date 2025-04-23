@@ -55,7 +55,8 @@ const LoginPage = () => {
               Let the beat guide your journey.
             </p>
           </div>
-          <form className="auth-form" onSubmit={handleLogin}>
+          <form className="auth-form" onSubmit={handleLogin}> 
+            {/* on submit goes to handleLogin */}
             <h2>Login</h2>
             <input
               type="email"

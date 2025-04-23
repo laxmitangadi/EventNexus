@@ -11,6 +11,7 @@ const RegisterPage = () => {
     name: '',
     phone: '',
     email: '',
+    roleid: '',
     password: '',
     confirmPassword: '',
   });
@@ -33,6 +34,7 @@ const RegisterPage = () => {
         name: form.name,
         phone: form.phone,
         email: form.email,
+        roleid: form.roleid,
         password: form.password,
       });
 
@@ -84,6 +86,14 @@ const RegisterPage = () => {
               placeholder="Email"
               required
               value={form.email}
+              onChange={handleChange}
+            />
+            <input
+              type="number"
+              name="roleid"
+              placeholder="roleid"
+              required
+              value={form.roleid}
               onChange={handleChange}
             />
             <input

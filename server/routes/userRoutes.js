@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
 
 // userRoutes.js
 router.post('/register', async (req, res) => {
-  const { name, phone, email, password } = req.body;
+  const { name, phone, email, roleid, password } = req.body;
 
   try {
     // Check if the user already exists
@@ -52,10 +52,10 @@ router.post('/register', async (req, res) => {
       name,
       phone,
       email,
+      roleid,
       password, // Consider hashing this in production
       status: 'active',
       created_at: new Date(),
-      role_id: 2, // Assume 2 is a default role_id
     });
 
     await newUser.save();

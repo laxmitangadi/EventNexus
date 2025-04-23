@@ -2,7 +2,6 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-  user_id: Number,
   name: String,
   phone: String,
   email: { type: String, unique: true },
@@ -10,7 +9,11 @@ const UserSchema = new mongoose.Schema({
   status: String,
   interest_id: Number,
   created_at: Date,
-  role_id: Number
-}, { collection: 'user' }); // Explicitly specify collection name if different
+  roleid: Number
+}, 
+{
+  collection: 'user',      // Collection name
+  versionKey: false        // Disable __v
+}); 
 
 module.exports = mongoose.models.User || mongoose.model('User', UserSchema);
