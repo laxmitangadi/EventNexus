@@ -86,4 +86,41 @@ router.post('/register', async (req, res) => {
   }
 });
 
+
+// userRoutes.js
+// userRoutes.js
+router.put('/update', async (req, res) => {
+  const { userId, updatedUser } = req.body;
+
+  try {
+    // Convert string ID to MongoDB ObjectId if needed
+    const user = await User.findByIdAndUpdate(
+      userId, 
+      updatedUser, 
+      { new: true }
+    );
+
+    if (!user) {
+      return res.status(404).json({ 
+        success: false, 
+        message: 'User not found' 
+      });
+    }
+
+    res.json({
+      success: true,
+      message: 'User details updated successfully',
+      user: user
+    });
+  } catch (error) {
+    console.error('Error updating user:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Server error',
+      error: error.message 
+    });
+  }
+});
+
+
 module.exports = router;

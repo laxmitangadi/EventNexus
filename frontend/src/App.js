@@ -28,7 +28,7 @@ function App() {
         
         {/* Regular user routes (roleId 2) */}
         <Route element={<ProtectedRoute allowedRoles={[2]} />}>
-          <Route path="/profile" element={<UserProfileWrapper />} />
+          
           <Route path="/eventspage" element={<EventsPage />} />
           <Route path="/eventdetails" element={<EventDetails />} />
           <Route path="/paymentpage" element={<PaymentPage />} />
@@ -56,6 +56,7 @@ function App() {
         
         {/* Routes accessible by multiple roles */}
         <Route element={<ProtectedRoute allowedRoles={[1, 2, 3, 4]} />}>
+        <Route path="/profile" element={<UserProfileWrapper />} />
         </Route>
       </Routes>
     </Router>

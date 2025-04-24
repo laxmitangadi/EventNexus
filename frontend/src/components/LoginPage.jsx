@@ -37,7 +37,7 @@ const LoginPage = () => {
         localStorage.setItem('userid', res.data.user._id); // ✅ STORE USER ID HERE
 
   
-        const roleId = res.data.user.roleid;
+        let roleId = res.data.user.roleid;
         console.log('RoleID from response:', roleId, typeof roleId); // Debug roleid
   
         if (!roleId) {
