@@ -6,6 +6,7 @@ import Footer from './Footer';
 import ParticleBackground from './ParticleBackground';
 import axios from 'axios';
 
+
 const RegisterPage = () => {
   const [form, setForm] = useState({
     name: '',
