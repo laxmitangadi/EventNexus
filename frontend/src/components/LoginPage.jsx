@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -7,7 +8,8 @@ import Footer from './Footer';
 import ParticleBackground from './ParticleBackground';
 import { useNavigate } from 'react-router-dom';
 
-const LoginPage = () => {
+
+const LoginPage = () => { 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [msg, setMsg] = useState('');
@@ -15,33 +17,49 @@ const LoginPage = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-  
+    
     try {
       const res = await axios.post('http://localhost:5000/api/login', {
         email,
         password
       });
   
+      console.log('Full API response:', res.data); // Debug the full response
+  
       setMsg(res.data.message);
   
-      if (res.data.success) {
+      if (res.data.success && res.data.user) {
         alert('✅ Login successful!');
-        console.log('Login successful:', res.data); // Log the response to check if it's correct
+        console.log('User data from backend:', res.data.user); // Debug user object
+        
+        localStorage.setItem('sessionId', res.data.sessionId);
+        localStorage.setItem('user', JSON.stringify(res.data.user));
+        localStorage.setItem('userid', res.data.user._id); // ✅ STORE USER ID HERE
 
-        // Store session or user info in localStorage (optional)
-        localStorage.setItem('sessionId', res.data.sessionId); // Assuming sessionId is returned from the server
-
-        // Redirect to EventsPage on success
-        navigate('/EventsPage');
+  
+        const roleId = res.data.user.roleid;
+        console.log('RoleID from response:', roleId, typeof roleId); // Debug roleid
+  
+        if (!roleId) {
+          console.warn('RoleID is missing, defaulting to 1 (regular user)');
+          // eslint-disable-next-line no-const-assign
+          roleId = 1; // Set default
+        }
+  
+        let path = '/profile';
+        if (roleId == 2) path = '/eventspage';
+        else if (roleId == 3) path = '/eventorganizer';
+        else if (roleId == 4) path = '/sponsordashboard';
+  
+        navigate(path);
       } else {
         alert('❌ ' + res.data.message);
       }
     } catch (err) {
-      console.error(err);
+      console.error('Login error:', err.response?.data || err.message);
       setMsg('Login failed. Please try again.');
     }
   };
-
   return (
     <>
       <NavBar />
